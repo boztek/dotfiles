@@ -6,29 +6,21 @@ is_osx || return 1
 
 # Homebrew recipes
 recipes=(
-  ansible
   awscli
   bash
-  cmatrix
   coreutils
-  cowsay
   git
   git-extras
   htop-osx
   hub
-  id3tool
   jq
-  lesspipe
   man2html
-  mercurial
   nmap
-  postgresql
   reattach-to-user-namespace
   sl
   ssh-copy-id
-  terminal-notifier
-  the_silver_searcher
-  thefuck
+  # terminal-notifier
+  # thefuck
   tmux
   tmux-xpanes
   tree
