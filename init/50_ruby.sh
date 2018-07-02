@@ -9,7 +9,7 @@ if [[ "$(type -P rbenv)" ]]; then
   if (( ${#rubies[@]} > 0 )); then
     e_header "Installing Ruby versions: ${rubies[*]}"
     for r in "${rubies[@]}"; do
-      rbenv install "$r"
+      CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl`" rbenv install "$r"
       [[ "$r" == "${versions[0]}" ]] && rbenv global "$r"
     done
   fi
