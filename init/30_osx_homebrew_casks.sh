@@ -34,6 +34,7 @@ casks=(
   quicklook-json
   quicknfo
   suspicious-package
+  visual-studio-code
   webpquicklook
   # Color pickers
   colorpicker-developer
