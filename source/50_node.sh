@@ -37,10 +37,8 @@ npm_globals=(
   json2yaml
   grunt-cli
   gulp-cli
-  pushstate-server
   webpack
   yaml2json
-  yarn
 )
 
 # Because "rm -rf node_modules && npm install" takes WAY too long. Not sure
