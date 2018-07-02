@@ -33,12 +33,6 @@ alias nvmrc='exec nave use $(<.nvmrc)'
 npm_globals=(
   babel-cli
   eslint
-  json-lint
-  json2yaml
-  grunt-cli
-  gulp-cli
-  webpack
-  yaml2json
 )
 
 # Because "rm -rf node_modules && npm install" takes WAY too long. Not sure
