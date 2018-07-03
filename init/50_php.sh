@@ -7,3 +7,8 @@ wget https://raw.githubusercontent.com/composer/getcomposer.org/1b137f8bf6db3e79
 mv composer.phar /usr/local/bin/composer
 composer global require laravel/valet
 valet install
+
+# Serve sites in ~/Sites
+mkdir $HOME/Sites
+cd $HOME/Sites
+valet park
