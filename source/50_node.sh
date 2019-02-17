@@ -14,6 +14,7 @@ function nodenv_install() {
   if [[ ! -d "${NODENV_ROOT:-$HOME/.nodenv}/versions/10.15.1" ]]; then
     e_header "Installing Node.js LTS"
     nodenv install 10.15.1
+    nodenv global 10.15.1
   fi
 }
 
