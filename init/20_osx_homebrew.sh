@@ -13,6 +13,7 @@ fi
 e_header "Updating Homebrew"
 brew doctor
 brew update
+sudo chown -R $(whoami) /usr/local/lib/pkgconfig
 
 # Functions used in subsequent init scripts.
 
