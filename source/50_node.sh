@@ -1,30 +1,21 @@
-[[ "$1" != init && ! -e ~/.nave ]] && return 1
+[[ "$1" != init && ! -e ~/.nodenv ]] && return 1
 
-# export PATH
+export PATH
 # PATH=~/.nave/installed/default/bin:"$(path_remove ~/.nave/installed/*/bin)"
 
-# # Set a specific version of node as the "default" for "nave use default"
-# function nave_default() {
-#   local version
-#   local default=${NAVE_DIR:-$HOME/.nave}/installed/default
-#   [[ ! "$1" ]] && echo "Specify a node version or \"stable\"" && return 1
-#   [[ "$1" == "stable" ]] && version=$(nave stable) || version=${1#v}
-#   rm "$default" 2>/dev/null
-#   ln -s $version "$default"
-#   echo "Nave default set to $version"
-# }
+PATH=$HOME/.nodenv/bin:"$(path_remove $HOME/.nodenv/bin)"
+if [[ "$(type -P nodenv)" && ! "$(type -t _nodenv)" ]]; then
+    eval "$(nodenv init -)"
+fi
 
-# # Install a version of node, set as default, install npm modules, etc.
-# function nave_install() {
-#   local version
-#   [[ ! "$1" ]] && echo "Specify a node version or \"stable\"" && return 1
-#   [[ "$1" == "stable" ]] && version=$(nave stable) || version=${1#v}
-#   if [[ ! -d "${NAVE_DIR:-$HOME/.nave}/installed/$version" ]]; then
-#     e_header "Installing Node.js $version"
-#     nave install $version
-#   fi
-#   [[ "$1" == "stable" ]] && nave_default stable && npm_install
-# }
+# Install a version of node, set as default, install npm modules, etc.
+function nodenv_install() {
+  [[ ! "$1" ]] && echo "Specify a node version or \"lts\"" && return 1
+  if [[ ! -d "${NODENV_ROOT:-$HOME/.nodenv}/versions/10.15.1" ]]; then
+    e_header "Installing Node.js LTS"
+    nodenv install 10.15.1
+  fi
+}
 
 # # Use the version of node in the local .nvmrc file
 # alias nvmrc='exec nave use $(<.nvmrc)'

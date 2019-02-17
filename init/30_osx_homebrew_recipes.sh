@@ -17,6 +17,7 @@ recipes=(
   jq
   man2html
   nmap
+  nodenv
   reattach-to-user-namespace
   sl
   ssh-copy-id
