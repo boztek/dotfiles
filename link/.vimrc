@@ -383,9 +383,4 @@ else
 endif
 call plug#end()
 
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_italicize_comments = 1
-let g:gruvbox_contrast_dark = 'medium'
 set background=dark
-colorscheme gruvbox
