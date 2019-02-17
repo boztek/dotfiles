@@ -6,6 +6,7 @@ is_osx || return 1
 
 # Homebrew recipes
 recipes=(
+  ansible
   awscli
   bash
   coreutils
@@ -19,8 +20,6 @@ recipes=(
   reattach-to-user-namespace
   sl
   ssh-copy-id
-  # terminal-notifier
-  # thefuck
   tmux
   tmux-xpanes
   tree
