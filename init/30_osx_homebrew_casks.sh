@@ -22,6 +22,7 @@ casks=(
   # dropbox
   firefox
   iterm2
+  java
   vagrant
   virtualbox
   vlc
