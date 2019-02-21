@@ -16,6 +16,7 @@ recipes=(
   hub
   jq
   man2html
+  mongodb
   nmap
   nodenv
   reattach-to-user-namespace
