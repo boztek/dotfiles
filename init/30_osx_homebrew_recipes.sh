@@ -12,6 +12,7 @@ recipes=(
   coreutils
   git
   git-extras
+  go
   htop-osx
   hub
   jq
