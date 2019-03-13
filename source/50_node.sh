@@ -2,8 +2,8 @@
 
 export PATH
 # PATH=~/.nave/installed/default/bin:"$(path_remove ~/.nave/installed/*/bin)"
-
 PATH=$HOME/.nodenv/bin:"$(path_remove $HOME/.nodenv/bin)"
+
 if [[ "$(type -P nodenv)" && ! "$(type -t _nodenv)" ]]; then
     eval "$(nodenv init -)"
 fi
@@ -11,10 +11,10 @@ fi
 # Install a version of node, set as default, install npm modules, etc.
 function nodenv_install() {
   [[ ! "$1" ]] && echo "Specify a node version or \"lts\"" && return 1
-  if [[ ! -d "${NODENV_ROOT:-$HOME/.nodenv}/versions/10.15.1" ]]; then
+  if [[ ! -d "${NODENV_ROOT:-$HOME/.nodenv}/versions/10.15.2" ]]; then
     e_header "Installing Node.js LTS"
-    nodenv install 10.15.1
-    nodenv global 10.15.1
+    nodenv install 10.15.2
+    nodenv global 10.15.2
   fi
 }
 

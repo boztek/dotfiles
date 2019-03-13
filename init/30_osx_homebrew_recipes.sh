@@ -26,6 +26,7 @@ recipes=(
   tmux
   tmux-xpanes
   tree
+  watchman
   wget
 )
 

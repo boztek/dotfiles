@@ -21,6 +21,7 @@ casks=(
   docker
   # dropbox
   firefox
+  grammarly
   iterm2
   java
   vagrant
