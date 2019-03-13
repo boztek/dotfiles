@@ -1,6 +1,10 @@
 # Load nave- and npm-related functions.
 source $DOTFILES/source/50_php.sh init
 
+local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
+
+[[ "$(type -P $binroot/valet)" ]] && return 1
+
 # Install PHP stack with valet.
 brew install php@7.2
 brew link php@7.2 --force
