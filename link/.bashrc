@@ -3,13 +3,13 @@
 
 export PATH=~/bin:~/.dotfiles/bin:/usr/local/bin:/sbin:$PATH
 
-if [ -d "~/.rbenv" ]; then
-    export PATH=~/.rbenv/bin:$PATH
-    eval "$(rbenv init -)"
-    rbenv global 1.9.3-p392
-fi
+# if [ -d "~/.rbenv" ]; then
+#     export PATH=~/.rbenv/bin:$PATH
+#     eval "$(rbenv init -)"
+#     rbenv global 1.9.3-p392
+# fi
 
-# alias veracrypt on os x machines
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-    alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text'
-fi
+# # alias veracrypt on os x machines
+# if [[ "$OSTYPE" =~ ^darwin ]]; then
+#     alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text'
+# fi

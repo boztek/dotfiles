@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #Based heavily on Ben Alman's dotfiles repo
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP

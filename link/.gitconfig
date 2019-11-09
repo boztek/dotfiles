@@ -1,13 +1,13 @@
 [user]
-  name = YourName
-  email = YourEmail
+  name = Boris Gordon
+  email = boris@boztek.net
 [github]
-  user = YourName
+  user = boztek
 [branch]
   autosetupmerge = true
 
-[url "git@heroku.com:"]
-  insteadOf = "heroku:"
+# [url "git@heroku.com:"]
+#   insteadOf = "heroku:"
 
 [url "git@github.com:"]
   insteadOf = "gh:"
