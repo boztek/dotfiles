@@ -14,3 +14,6 @@ fi
 brew install git
 brew install htop
 brew install tree
+brew install wget
+
+brew cask install visual-studio-code
