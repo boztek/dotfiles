@@ -28,3 +28,22 @@ else
     vagrant plugin install vagrant-vmware-desktop
     vagrant plugin license vagrant-vmware-desktop .dotfiles/configs/vagrant-vmware-desktop.lic
 fi
+
+# JVM
+if [ -d "./.sdkman" ]; then
+    [[ -s ".sdkman/bin/sdkman-init.sh" ]] && source ".sdkman/bin/sdkman-init.sh"
+    SDKMAN=$(sdk version)
+    e_header "$SDKMAN already installed"
+else
+    curl -s "https://get.sdkman.io" | bash
+fi
+sdk install java 11.0.5.hs-adpt
+sdk install kotlin
+brew install clojure
+
+# if JAVA_VERSION=$(java --version |head -n 1); then
+#     e_header "$JAVA_VERSION already installed"
+# else
+#     sdk install java 11.0.5.hs-adpt
+#     sdk install kotlin
+# fi
