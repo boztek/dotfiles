@@ -1,6 +1,18 @@
 #!/bin/bash
-set -xe
 
-# sudo apt-get update
-# sudo apt-get install -yy --no-install-recommends openjdk-7-jdk
-echo "sdk man?"
+# set -xe
+# Logging stuff.
+function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
+function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
+function e_error()    { echo -e " \033[1;31m✖\033[0m  $@"; }
+function e_arrow()    { echo -e " \033[1;33m➜\033[0m  $@"; }
+
+if [ -d "./.sdkman" ]; then
+    [[ -s ".sdkman/bin/sdkman-init.sh" ]] && source ".sdkman/bin/sdkman-init.sh"
+    SDKMAN=$(sdk version)
+    e_header "$SDKMAN already installed"
+else
+    curl -s "https://get.sdkman.io" | bash
+    sdk install java 11.0.5.hs-adpt
+    sdk install kotlin
+fi
