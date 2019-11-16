@@ -29,12 +29,20 @@ else
     vagrant plugin license vagrant-vmware-desktop .dotfiles/configs/vagrant-vmware-desktop.lic
 fi
 
-# if JAVA_VERSION=$(java --version |head -n 1); then
-#     e_header "$JAVA_VERSION already installed"
-# else
-#     sdk install java 11.0.5.hs-adpt
-#     sdk install kotlin
-# fi
-
+# JVM
 $HOME/.dotfiles/scripts/jvm_dev.sh
 brew install clojure
+
+# Scheme
+brew cask install racket
+
+# Rust
+
+# Ruby
+brew install rbenv
+$HOME/.dotfiles/scripts/ruby_dev.sh
+
+# Node
+
+# IDE
+brew cask install jetbrains-toolbox

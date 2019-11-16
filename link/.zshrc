@@ -1,3 +1,5 @@
+# ruby environment management
+hash rbenv &> /dev/null && eval "$(rbenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
