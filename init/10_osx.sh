@@ -16,6 +16,9 @@ brew install htop
 brew install tree
 brew install wget
 
+# Docker
+brew cask install docker
+
 # vmware fusion and vagrant
 brew cask install vmware-fusion
 brew cask install vagrant
