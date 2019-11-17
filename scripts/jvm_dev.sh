@@ -7,8 +7,8 @@ function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
 function e_error()    { echo -e " \033[1;31m✖\033[0m  $@"; }
 function e_arrow()    { echo -e " \033[1;33m➜\033[0m  $@"; }
 
-if [ -d "./.sdkman" ]; then
-    [[ -s ".sdkman/bin/sdkman-init.sh" ]] && source ".sdkman/bin/sdkman-init.sh"
+if [ -d "$HOME/.sdkman" ]; then
+    [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
     SDKMAN=$(sdk version)
     e_header "$SDKMAN already installed"
 else
