@@ -5,6 +5,8 @@
   user = boztek
 [branch]
   autosetupmerge = true
+[pull]
+	ff = only
 
 # [url "git@heroku.com:"]
 #   insteadOf = "heroku:"
