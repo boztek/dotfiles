@@ -11,10 +11,20 @@ if [[ "$(type -P brew)" ]]; then
     brew update
 fi
 
-brew install git
-brew install htop
-brew install tree
-brew install wget
+if [ -d "/usr/local/Cellar/git" ]; then
+    brew upgrade git
+    brew upgrade htop
+    brew upgrade tree
+    brew upgrade wget
+else
+    brew install git
+    brew install htop
+    brew install tree
+    brew install wget
+fi
+
+# Dotfile encrypted volume access
+brew cask install veracrypt
 
 # Docker
 brew cask install docker
@@ -32,10 +42,14 @@ fi
 
 # JVM
 $HOME/.dotfiles/scripts/jvm_dev.sh
-brew install clojure
+if [ -d "/usr/local/Cellar/clojure" ]; then
+    brew upgrade clojure
+else
+    brew install clojure
+fi
 
 # Scheme
-brew cask install racket
+brew cask install racket-cs
 
 # Ruby
 brew install rbenv
