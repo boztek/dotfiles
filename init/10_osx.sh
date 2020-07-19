@@ -64,10 +64,12 @@ $HOME/.dotfiles/scripts/ruby_dev.sh
 # Node
 brew install nodenv
 $HOME/.dotfiles/scripts/node_dev.sh
-# brew install yarn
 
 # Rust
 
 # IDE
 brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
+
+# Apps
+brew cask install workflowy
