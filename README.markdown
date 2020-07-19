@@ -1,5 +1,5 @@
-# DevOp dotfiles scaffold
+# Boris Gordon dotfiles
 
-Detailed explaination at http://thedevop.com/members/dotfiles/
+## MacOS install
 
-Customize these to your heart's content.
+bash -c "$(curl -fsSL https://raw.github.com/boztek/dotfiles/master/bin/dotfiles)" && source ~/.zshrc
