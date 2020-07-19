@@ -37,7 +37,11 @@ if VAGRANT_PLUGIN=$(vagrant plugin list |grep vagrant-vmware-desktop); then
 else
     brew cask install vagrant-vmware-utility
     vagrant plugin install vagrant-vmware-desktop
-    vagrant plugin license vagrant-vmware-desktop .dotfiles/private/licenses/vagrant-vmware-desktop.lic
+    if [ -d "$HOME/.dotfiles/private" ]; then
+        vagrant plugin license vagrant-vmware-desktop ~/.dotfiles/private/licenses/vagrant-vmware-desktop.lic
+    else
+        e_error "Re-run with private volume mounted to install vagrant vmware licence"
+    fi
 fi
 
 # JVM
