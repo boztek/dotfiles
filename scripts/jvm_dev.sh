@@ -15,5 +15,6 @@ if [ -d "$HOME/.sdkman" ]; then
     yes | sdk upgrade java
 else
     curl -s "https://get.sdkman.io" | bash
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk install java 11.0.7.hs-adpt
 fi

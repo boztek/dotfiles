@@ -7,6 +7,8 @@ export PATH=~/bin:~/.dotfiles/bin:/usr/local/bin:/sbin:$PATH
 if [[ "$OSTYPE" =~ ^darwin ]]; then
     alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text'
 fi
+alias mntp='veracrypt --pim=0 -k "" --protect-hidden=no ~/.dotfiles/private.vc ~/.dotfiles/private/'
+alias unmntp='veracrypt --dismount ~/.dotfiles/private/'
 
 # ruby environment management
 hash rbenv &> /dev/null && eval "$(rbenv init -)"

@@ -37,10 +37,12 @@ if VAGRANT_PLUGIN=$(vagrant plugin list |grep vagrant-vmware-desktop); then
 else
     brew cask install vagrant-vmware-utility
     vagrant plugin install vagrant-vmware-desktop
-    if [ -d "$HOME/.dotfiles/private" ]; then
+    if [ ! -d "$HOME/.dotfiles/private" ]; then
+        /Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text ~/.dotfiles/private.vc ~/.dotfiles/private/
         vagrant plugin license vagrant-vmware-desktop ~/.dotfiles/private/licenses/vagrant-vmware-desktop.lic
+        /Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text -d ~/.dotfiles/private/
     else
-        e_error "Re-run with private volume mounted to install vagrant vmware licence"
+        vagrant plugin license vagrant-vmware-desktop ~/.dotfiles/private/licenses/vagrant-vmware-desktop.lic
     fi
 fi
 
