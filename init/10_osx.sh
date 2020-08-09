@@ -62,10 +62,22 @@ brew install rbenv
 $HOME/.dotfiles/scripts/ruby_dev.sh
 
 # Node
-brew install nodenv
+if [ -d "/usr/local/Cellar/nodenv" ]; then
+    brew upgrade nodenv
+    brew upgrade node-build
+else
+    brew install nodenv
+fi
 $HOME/.dotfiles/scripts/node_dev.sh
 
 # Rust
+
+# Go
+if [ -d "/usr/local/Cellar/golang" ]; then
+    brew upgrade golang
+else
+    brew install golang
+fi
 
 # IDE
 brew cask install visual-studio-code
