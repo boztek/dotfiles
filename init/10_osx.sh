@@ -84,4 +84,5 @@ brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
 
 # Apps
+brew cask install omnifocus
 brew cask install workflowy
