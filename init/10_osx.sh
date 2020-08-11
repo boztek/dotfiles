@@ -80,6 +80,7 @@ else
 fi
 
 # IDE
+brew cask install emacs
 brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
 
