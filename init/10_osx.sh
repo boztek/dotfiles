@@ -70,6 +70,13 @@ else
 fi
 $HOME/.dotfiles/scripts/node_dev.sh
 
+#Python
+if [ -d "/usr/local/Cellar/python@3.8" ]; then
+    brew upgrade python@3.8
+else
+    brew install python@3.8
+fi
+
 # Rust
 
 # Go
