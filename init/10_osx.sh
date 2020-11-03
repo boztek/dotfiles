@@ -31,7 +31,11 @@ brew cask install docker
 
 # vmware fusion and vagrant
 brew cask install vmware-fusion
-brew cask install vagrant
+if [ -d "/usr/local/Caskroom/vagrant" ]; then
+    brew cask reinstall vagrant
+else
+    brew cask install vagrant
+fi
 if VAGRANT_PLUGIN=$(vagrant plugin list |grep vagrant-vmware-desktop); then
     e_header "$VAGRANT_PLUGIN already installed"
 else
@@ -80,10 +84,10 @@ fi
 # Rust
 
 # Go
-if [ -d "/usr/local/Cellar/golang" ]; then
-    brew upgrade golang
+if [ -d "/usr/local/Cellar/go" ]; then
+    brew upgrade go
 else
-    brew install golang
+    brew install go
 fi
 
 # IDE
