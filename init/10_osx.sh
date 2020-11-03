@@ -1,5 +1,7 @@
 [[ "$OSTYPE" =~ ^darwin ]] || return 1
 
+[[ ! -f /etc/fstab ]] && sudo cp $DOTFILES/init/10_osx.fstab /etc/fstab
+
 #Make sure homebrew is installed
 if [[ ! "$(type -P brew)" ]]; then
     e_header "Installing Homebrew"
