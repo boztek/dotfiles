@@ -34,9 +34,9 @@ brew cask install docker
 # vmware fusion and vagrant
 brew cask install vmware-fusion
 if [ -d "/usr/local/Caskroom/vagrant" ]; then
-    brew cask reinstall vagrant
+    brew upgrade --cask vagrant
 else
-    brew cask install vagrant
+    brew install --cask vagrant
 fi
 if VAGRANT_PLUGIN=$(vagrant plugin list |grep vagrant-vmware-desktop); then
     e_header "$VAGRANT_PLUGIN already installed"
@@ -81,6 +81,11 @@ if [ -d "/usr/local/Cellar/python@3.8" ]; then
     brew upgrade python@3.8
 else
     brew install python@3.8
+fi
+if [ -d "/usr/local/Cellar/python3" ]; then
+    brew upgrade python3
+else
+    brew install python3
 fi
 
 # Rust
