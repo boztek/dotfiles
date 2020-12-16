@@ -12,14 +12,28 @@ if [ -d "$HOME/.sdkman" ]; then
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
     SDKMAN=$(yes | sdk version)
     e_header "$SDKMAN already installed"
+    yes | sdk update
     SDK_JAVA_NOT_INSTALLED=$(sdk current java |grep 'Not using any version of java' |wc -l |tr -d ' ')
     if [[ $SDK_JAVA_NOT_INSTALLED -eq 1 ]]; then
         sdk install java 11.0.9.hs-adpt
     else
         yes | sdk upgrade java
     fi
+    LEIN_NOT_INSTALLED=$(sdk current leiningen |grep 'Not using any version of leiningen' |wc -l |tr -d ' ')
+    if [[ $LEIN_NOT_INSTALLED -eq 1 ]]; then
+        sdk install leiningen
+    else
+        yes | sdk upgrade leiningen
+    fi
+    KOTLIN_NOT_INSTALLED=$(sdk current kotlin |grep 'Not using any version of kotlin' |wc -l |tr -d ' ')
+    if [[ $KOTLIN_NOT_INSTALLED -eq 1 ]]; then
+        sdk install kotlin
+    else
+        yes | sdk upgrade kotlin
+    fi
 else
     curl -s "https://get.sdkman.io" | bash
     source "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk install java 11.0.9.hs-adpt
+    sdk install kotlin
 fi

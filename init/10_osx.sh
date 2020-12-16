@@ -97,8 +97,16 @@ else
     brew install go
 fi
 
+# emacs
+if [ -d "/usr/local/Cellar/emacs-plus@27" ]; then
+    brew upgrade emacs-plus
+else
+    brew tap d12frosted/emacs-plus
+    brew install emacs-plus
+fi
+
+
 # IDE
-brew cask install emacs
 brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
 

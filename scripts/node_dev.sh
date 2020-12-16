@@ -15,7 +15,7 @@ if NODENV=$(nodenv init -); then
     eval "$NODENV"
     N_NODENV_VERSIONS_INSTALLED=$(nodenv versions |wc -l |tr -d ' ')
 else
-    e_error "nodenv non found"
+    e_error "nodenv not found"
     exit 1
 fi
 
