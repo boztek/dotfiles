@@ -26,13 +26,13 @@ else
 fi
 
 # Dotfile encrypted volume access
-brew cask install veracrypt
+brew install --cask veracrypt
 
 # Docker
-brew cask install docker
+brew install --cask docker
 
 # vmware fusion and vagrant
-brew cask install vmware-fusion
+# brew install --cask vmware-fusion
 if [ -d "/usr/local/Caskroom/vagrant" ]; then
     brew upgrade --cask vagrant
 else
@@ -41,7 +41,7 @@ fi
 if VAGRANT_PLUGIN=$(vagrant plugin list |grep vagrant-vmware-desktop); then
     e_header "$VAGRANT_PLUGIN already installed"
 else
-    brew cask install vagrant-vmware-utility
+    brew install --cask vagrant-vmware-utility
     vagrant plugin install vagrant-vmware-desktop
     if [ ! -d "$HOME/.dotfiles/private" ]; then
         /Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text ~/.dotfiles/private.vc ~/.dotfiles/private/
@@ -61,7 +61,7 @@ else
 fi
 
 # Scheme
-brew cask install racket-cs
+brew install --cask racket-cs
 
 # Ruby
 brew install rbenv
@@ -107,12 +107,12 @@ fi
 
 
 # IDE
-brew cask install visual-studio-code
-brew cask install jetbrains-toolbox
+brew install --cask visual-studio-code
+brew install --cask jetbrains-toolbox
 
 # Apps
-brew cask install omnifocus
-brew cask install workflowy
+brew install --cask omnifocus
+brew install --cask workflowy
 
 # ...
 
