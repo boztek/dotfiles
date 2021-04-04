@@ -1,6 +1,6 @@
 [[ "$OSTYPE" =~ ^darwin ]] || return 1
 
-[[ ! -f /etc/fstab ]] && sudo cp $DOTFILES/init/10_osx.fstab /etc/fstab
+[[ ! -f /etc/fstab ]] && sudo cp $DOTFILES/resources/10_osx.fstab /etc/fstab
 
 #Make sure homebrew is installed
 if [[ ! "$(type -P brew)" ]]; then
@@ -109,10 +109,3 @@ fi
 # IDE
 brew install --cask visual-studio-code
 brew install --cask jetbrains-toolbox
-
-# Apps
-brew install --cask omnifocus
-brew install --cask workflowy
-
-# ...
-
