@@ -26,7 +26,12 @@ else
 fi
 
 # Dotfile encrypted volume access
-brew install --cask veracrypt
+if [ -d "/Applications/Veracrypt.app" ]; then
+    brew upgrade veracrypt
+else
+  e_error "Veracrypt not installed: brew install --cask veracrypt and restart"
+  exit 1
+fi
 
 # Docker
 brew install --cask docker
@@ -59,9 +64,6 @@ if [ -d "/usr/local/Cellar/clojure" ]; then
 else
     brew install clojure
 fi
-
-# Scheme
-brew install --cask racket-cs
 
 # Ruby
 brew install rbenv
