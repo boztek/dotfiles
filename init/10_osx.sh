@@ -107,6 +107,8 @@ else
     brew install emacs-plus
 fi
 
+# jq
+brew install jq
 
 # IDE
 brew install --cask visual-studio-code
