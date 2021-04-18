@@ -46,7 +46,7 @@ fi
 if VAGRANT_PLUGIN=$(vagrant plugin list |grep vagrant-vmware-desktop); then
     e_header "$VAGRANT_PLUGIN already installed"
 else
-    brew install --cask vagrant-vmware-utility
+    # brew install --cask vagrant-vmware-utility
     vagrant plugin install vagrant-vmware-desktop
     if [ ! -d "$HOME/.dotfiles/private" ]; then
         /Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text ~/.dotfiles/private.vc ~/.dotfiles/private/
