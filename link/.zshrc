@@ -3,6 +3,14 @@
 
 export PATH=~/bin:~/.dotfiles/bin:/usr/local/bin:/sbin:$PATH
 
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # alias veracrypt on os x machines
 if [[ "$OSTYPE" =~ ^darwin ]]; then
     alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/VeraCrypt --text'

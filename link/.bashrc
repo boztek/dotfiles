@@ -15,3 +15,4 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
 fi
 alias mntp='veracrypt --pim=0 -k "" --protect-hidden=no ~/.dotfiles/private.vc ~/.dotfiles/private/'
 alias unmntp='veracrypt --dismount ~/.dotfiles/private/'
+. "$HOME/.cargo/env"
