@@ -19,6 +19,8 @@ alias mntp='veracrypt --pim=0 -k "" --protect-hidden=no ~/.dotfiles/private.vc ~
 alias unmntp='veracrypt --dismount ~/.dotfiles/private/ && pushd -q ~/.dotfiles && git restore private.vc && popd -q'
 alias savep='veracrypt --dismount ~/.dotfiles/private/ && pushd -q ~/.dotfiles && git add private.vc && git commit -am"save sec" && popd -q && mntp'
 
+alias co='git co'
+
 # ruby environment management
 hash rbenv &> /dev/null && eval "$(rbenv init -)"
 
