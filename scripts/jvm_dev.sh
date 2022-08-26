@@ -15,7 +15,7 @@ if [ -d "$HOME/.sdkman" ]; then
     yes | sdk update
     SDK_JAVA_NOT_INSTALLED=$(sdk current java |grep 'Not using any version of java' |wc -l |tr -d ' ')
     if [[ $SDK_JAVA_NOT_INSTALLED -eq 1 ]]; then
-        sdk install java 11.0.9.hs-adpt
+        sdk install java 17.0.4-tem
     else
         yes | sdk upgrade java
     fi
@@ -34,6 +34,6 @@ if [ -d "$HOME/.sdkman" ]; then
 else
     curl -s "https://get.sdkman.io" | bash
     source "$HOME/.sdkman/bin/sdkman-init.sh"
-    sdk install java 11.0.9.hs-adpt
+    sdk install java 17.0.4-tem
     sdk install kotlin
 fi
