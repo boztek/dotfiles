@@ -91,6 +91,11 @@ else
 fi
 
 # Rust
+if [ -f "$HOME/.cargo/bin/rustup" ]; then
+    rustup update
+else
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+fi
 
 # Go
 if [ -d "/usr/local/Cellar/go" ]; then
@@ -118,3 +123,4 @@ brew tap microsoft/git
 brew install git-credential-manager-core
 
 brew install diff-so-fancy
+brew install ripgrep

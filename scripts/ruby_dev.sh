@@ -25,7 +25,7 @@ set -o pipefail
 e_arrow "ruby versions installed: $N_RBENV_NON_SYSTEM_VERSIONS_INSTALLED"
 if [[ $N_RBENV_NON_SYSTEM_VERSIONS_INSTALLED -eq 0 ]]; then
     e_header "Installing Ruby with rbenv"
-    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
     LATEST_2_VERSION=$(rbenv install --list|grep ^2. |grep "^2\..\.[0-9]*$" |tail -n1)
     e_arrow "installing ruby $LATEST_2_VERSION"
     rbenv install $LATEST_2_VERSION
