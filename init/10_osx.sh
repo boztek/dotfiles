@@ -113,3 +113,5 @@ brew install jq
 # IDE
 brew install --cask visual-studio-code
 brew install --cask jetbrains-toolbox
+
+brew install diff-so-fancy

@@ -26,7 +26,7 @@ e_arrow "node.js versions installed: $N_NODENV_VERSIONS_INSTALLED"
 if [[ $N_NODENV_VERSIONS_INSTALLED -lt 1 ]]; then
     e_header "Installing Node with nodenv"
     curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
-    LATEST_NODE_LTS=$(nodenv install --list|grep ^14. |grep "^14\.[0-9]*\.[0-9]*$" |tail -n1)
+    LATEST_NODE_LTS=$(nodenv install --list|grep ^16. |grep "^16\.[0-9]*\.[0-9]*$" |tail -n1)
     e_arrow "installing node.js $LATEST_NODE_LTS"
     nodenv install $LATEST_NODE_LTS
     e_arrow "setting global node.js to $LATEST_NODE_LTS"
