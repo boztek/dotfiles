@@ -114,4 +114,7 @@ brew install jq
 brew install --cask visual-studio-code
 brew install --cask jetbrains-toolbox
 
+brew tap microsoft/git
+brew install git-credential-manager-core
+
 brew install diff-so-fancy
