@@ -4,3 +4,4 @@
 private/
 backups/
 caches/
+.DS_Store
