@@ -19,7 +19,9 @@ if [ -d "$HOME/.sdkman" ]; then
     else
         yes | sdk upgrade java
     fi
+
     # TODO: install gradle and gradle-completions
+
     LEIN_NOT_INSTALLED=$(sdk current leiningen |grep 'Not using any version of leiningen' |wc -l |tr -d ' ')
     if [[ $LEIN_NOT_INSTALLED -eq 1 ]]; then
         sdk install leiningen
