@@ -1,0 +1,19 @@
+[user]
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEUyrf/InW/cn36Jim0PEzRAts/bIO/MIJa6paLg7enM
+  name = Boris Gordon
+  email = boris@boztek.net
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
+[branch]
+  autosetupmerge = true
+
+[pull]
+  ff = only
