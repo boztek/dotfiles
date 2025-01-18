@@ -6,7 +6,7 @@
 [branch]
   autosetupmerge = true
 [pull]
-	ff = only
+  ff = only
 
 # [url "git@heroku.com:"]
 #   insteadOf = "heroku:"
@@ -17,12 +17,12 @@
   pushInsteadOf = "git://github.com/"
 
 [core]
-	editor = emacs -nw
+	editor = emacs -Q -nw
+	#editor = emacsclient -c -nw -alternate-editor=\"emacs -Q -nw\"
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager-core

@@ -33,8 +33,8 @@ else
   exit 1
 fi
 
-# Docker
-brew install --cask docker
+# Docker (REPLACE w/Orb stack)
+# brew install orbstack
 
 # vmware fusion and vagrant
 # brew install --cask vmware-fusion
@@ -57,70 +57,74 @@ brew install --cask docker
 #     fi
 # fi
 
+###
+# Dev environments - replace with mise
+###
+
 # JVM
-$HOME/.dotfiles/scripts/jvm_dev.sh
-if [ -d "/usr/local/Cellar/clojure" ]; then
-    brew upgrade clojure
-else
-    brew install clojure
-fi
+# $HOME/.dotfiles/scripts/jvm_dev.sh
+# if [ -d "/usr/local/Cellar/clojure" ]; then
+#     brew upgrade clojure
+# else
+#     brew install clojure
+# fi
 
-# Ruby
-brew install rbenv
-$HOME/.dotfiles/scripts/ruby_dev.sh
+# # Ruby
+# brew install rbenv
+# $HOME/.dotfiles/scripts/ruby_dev.sh
 
-# Node
-if [ -d "/usr/local/Cellar/nodenv" ]; then
-    brew upgrade nodenv
-    brew upgrade node-build
-else
-    brew install nodenv
-fi
-$HOME/.dotfiles/scripts/node_dev.sh
+# # Node
+# if [ -d "/usr/local/Cellar/nodenv" ]; then
+#     brew upgrade nodenv
+#     brew upgrade node-build
+# else
+#     brew install nodenv
+# fi
+# $HOME/.dotfiles/scripts/node_dev.sh
 
-#Python
-if [ -d "/usr/local/Cellar/python@3.8" ]; then
-    brew upgrade python@3.8
-else
-    brew install python@3.8
-fi
-if [ -d "/usr/local/Cellar/python3" ]; then
-    brew upgrade python3
-else
-    brew install python3
-fi
+# #Python
+# if [ -d "/usr/local/Cellar/python@3.8" ]; then
+#     brew upgrade python@3.8
+# else
+#     brew install python@3.8
+# fi
+# if [ -d "/usr/local/Cellar/python3" ]; then
+#     brew upgrade python3
+# else
+#     brew install python3
+# fi
 
-# Rust
-if [ -f "$HOME/.cargo/bin/rustup" ]; then
-    rustup update
-else
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-fi
+# # Rust
+# if [ -f "$HOME/.cargo/bin/rustup" ]; then
+#     rustup update
+# else
+#     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+# fi
 
-# Go
-if [ -d "/usr/local/Cellar/go" ]; then
-    brew upgrade go
-else
-    brew install go
-fi
+# # Go
+# if [ -d "/usr/local/Cellar/go" ]; then
+#     brew upgrade go
+# else
+#     brew install go
+# fi
 
-# emacs
-if [ -d "/usr/local/Cellar/emacs-plus@27" ]; then
-    brew upgrade emacs-plus
-else
-    brew tap d12frosted/emacs-plus
-    brew install emacs-plus
-fi
+# # emacs
+# if [ -d "/usr/local/Cellar/emacs-plus@27" ]; then
+#     brew upgrade emacs-plus
+# else
+#     brew tap d12frosted/emacs-plus
+#     brew install emacs-plus
+# fi
 
-# jq
-brew install jq
+# # jq
+# brew install jq
+# brew install diff-so-fancy
+# brew install ripgrep
 
 # IDE
 brew install --cask visual-studio-code
 brew install --cask jetbrains-toolbox
 
-brew tap microsoft/git
-brew install git-credential-manager-core
-
-brew install diff-so-fancy
-brew install ripgrep
+# ??? brew tap microsoft/git
+# brew install git-credential-manager-core
+# REPLACE w/ git-credential-manager ?

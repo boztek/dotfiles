@@ -28,6 +28,8 @@ hash rbenv &> /dev/null && eval "$(rbenv init -)"
 # node.js environment management
 hash nodenv &> /dev/null && eval "$(nodenv init -)" && export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 # Prompt
 PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
 RPROMPT='%*'
