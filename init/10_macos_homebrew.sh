@@ -11,3 +11,8 @@ if [[ ! "$(type -P brew)" ]]; then
     # eval "$(/opt/homebrew/bin/brew shellenv)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+if [[ "$(type -P brew)" ]]; then
+    e_header "Updating Homebrew"
+    brew update
+fi
