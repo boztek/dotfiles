@@ -17,6 +17,7 @@ if [[ ! "$(type -P mise)" ]]; then
     sudo mkdir -pv /usr/local/share/zsh/site-functions
     sudo mv /tmp/_mise /usr/local/share/zsh/site-functions
 
+    # Install dev tools defined in config/mise/config.toml
     mise install
     e_header "Installed development tools:"
     mise ls
