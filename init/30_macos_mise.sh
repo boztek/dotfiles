@@ -16,4 +16,10 @@ if [[ ! "$(type -P mise)" ]]; then
     mise completion zsh > /tmp/_mise
     sudo mkdir -pv /usr/local/share/zsh/site-functions
     sudo mv /tmp/_mise /usr/local/share/zsh/site-functions
+
+    mise install
+    e_header "Installed development tools:"
+    mise ls
+
+    source $HOME/.zshrc
 fi
