@@ -1,5 +1,6 @@
 [tools]
 go = "1.23"
+java = "temurin-21"
 node = "22"
 usage = "latest"
 zig = "0.13"
