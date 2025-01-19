@@ -5,5 +5,9 @@ is_osx || return 1
 if [[ ! "$(type -P brew)" ]]; then
     e_header "Installing Homebrew"
     # https://docs.brew.sh/Installation#unattended-installation
-    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    # Following added to .zprofile
+    # eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
