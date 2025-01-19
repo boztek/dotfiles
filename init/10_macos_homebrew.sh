@@ -13,6 +13,5 @@ if [[ ! "$(type -P brew)" ]]; then
 fi
 
 if [[ "$(type -P brew)" ]]; then
-    e_header "Updating Homebrew"
     brew update
 fi

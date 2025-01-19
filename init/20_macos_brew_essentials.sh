@@ -7,3 +7,5 @@ brew install git
 brew install htop
 brew install tree
 brew install wget
+
+brew install gpg
