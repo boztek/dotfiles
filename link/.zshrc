@@ -3,10 +3,9 @@
 
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/sbin:$PATH"
 
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
+# zsh-completions
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
   autoload -Uz compinit
   compinit
 fi
@@ -28,3 +27,4 @@ if type mise &>/dev/null
 then
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
+
