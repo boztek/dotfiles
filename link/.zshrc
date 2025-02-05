@@ -28,3 +28,7 @@ then
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 
+if type java &>/dev/null
+then
+  compdef -d java
+fi
