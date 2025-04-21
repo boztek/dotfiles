@@ -5,6 +5,7 @@ e_header "Installing essential brews"
 
 brew install git
 brew install htop
+brew install rlwrap
 brew install tree
 brew install wget
 
