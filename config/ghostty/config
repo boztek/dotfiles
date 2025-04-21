@@ -1,6 +1,9 @@
 theme = dark: catppuccin-mocha,light:catppuccin-latte
+font-size = 14
 
 macos-option-as-alt = true
 
 keybind = global:ctrl+opt+super+t=toggle_quick_terminal
 
+window-width = 240
+window-height = 80
