@@ -1,5 +1,6 @@
 [tools]
 bun = "latest"
+clojure = "latest"
 go = "latest"
 java = "temurin-21"
 node = "22"
