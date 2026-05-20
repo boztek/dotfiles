@@ -12,15 +12,23 @@ fi
 
 # Prompt
 PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
-RPROMPT='%*'
-## git
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-RPROMPT="\$vcs_info_msg_0_ $RPROMPT"
-zstyle ':vcs_info:git:*' formats '%F{240}(%b)%r%f'
-zstyle ':vcs_info:*' enable git
+
+# RPROMPT with time and jj revision
+#RPROMPT='(${vcs_info_msg_1_:+$vcs_info_msg_1_}) %*'
+RPROMPT='${vcs_info_msg_1_:+(${vcs_info_msg_1_})} %*'
+
+## jj / git
+source $HOME/.dotfiles/link/zsh-jj/zsh-jj.plugin.zsh
+
+shot() {
+  jj describe -m "$*"
+  echo "📍 Shot called: $*"
+  echo "   Do your work, then run: tcr"
+}
+
+alias jjl='jj log'
+alias jjla="jj log -r 'all()'"
+alias tcr='./tcr.sh'
 
 # Activate mise
 if type mise &>/dev/null
