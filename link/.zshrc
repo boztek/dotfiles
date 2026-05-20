@@ -2,6 +2,13 @@
 [ -z "$PS1" ] && return
 
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/sbin:$PATH"
+export EDITOR="emacsclient -c -a ''"
+
+# Startup greeting
+if type greetings &>/dev/null
+then
+  # greetings $LOGNAME 
+fi
 
 # zsh-completions
 if type brew &>/dev/null; then
@@ -40,3 +47,18 @@ if type java &>/dev/null
 then
   compdef -d java
 fi
+
+# Aliases
+alias ll="ls -Gl"
+
+## Emacs
+alias e="emacsclient -c -n -a ''"
+alias emacs-restart='emacsclient -e "(kill-emacs)" && emacs --daemon'
+
+# pnpm
+export PNPM_HOME="/Users/boris/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
