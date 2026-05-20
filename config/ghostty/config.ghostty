@@ -1,0 +1,18 @@
+# theme = dark: Catppuccin Mocha,light: Catppuccin Latte
+theme = dark: Nightfox,light: Dayfox
+font-size = 14
+
+macos-option-as-alt = true
+
+keybind = global:ctrl+opt+super+t=toggle_quick_terminal
+
+keybind = ctrl+opt+super+f=write_scrollback_file:copy
+
+keybind = ctrl+alt+i=text:\x1b\x09
+
+window-position-x = 0
+window-position-y = 0
+#window-width = 240
+#window-height = 80
+
+scrollback-limit = 50000242880
