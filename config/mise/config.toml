@@ -1,6 +1,5 @@
 [tools]
 babashka = "latest"
-bun = "latest"
 clojure = "latest"
 go = "latest"
 java = "temurin-25"
